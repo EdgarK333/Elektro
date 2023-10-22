@@ -1,0 +1,164 @@
+@import url(/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  background-color: #f1f1f1;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  padding-top: 46px;
+  background-color: #f1f1f1;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 76px;
+}
+
+.logo {
+  position: relative;
+  padding: 0 12px 3px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+}
+
+.logo::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fda300;
+  border-radius: 50%;
+}
+
+.nav-list {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  column-gap: 50px;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.nav-link.active {
+  color: #606060;
+}
+
+.nav-button {
+  display: none;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.header-content {
+  margin-top: 124px;
+}
+
+.header-content h1 {
+  font-size: 44px;
+  font-weight: 600;
+}
+
+.header-content p {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  width: 75%;
+}
+
+/* About */
+
+.about-block {
+  background-color: #ffffff;
+  height: 650px;
+}
+
+.about-info {
+  padding-top: 30px;
+}
+
+.about-info h1 {
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.about-rules {
+  margin-bottom: 30px;
+}
+
+.about-rules p {
+  margin-bottom: 30px;
+}
+
+#gallery {
+  -moz-user-select: none;
+  user-select: none;
+  display: flex;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+#gallery img {
+  max-width: 600px;
+  max-height: 350px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  margin-right: 15px;
+}
+
+#gallery img:focus {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 31;
+  max-width: 90%;
+  max-height: 90%;
+  outline: none;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1.1);
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#gallery img:focus ~ div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  background: rgba(240, 240, 240, 0.9);
+  cursor: zoom-out;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
